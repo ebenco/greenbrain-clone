@@ -1,0 +1,496 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+ /* primary/main color */
+ --clolor-primary: #49a6e9;
+ /* secondary color */
+ --cloro-secondary: #49a6e9;
+ 
+ --clr-white: #fff;
+ --clr-secondary: hsla(182, 63%, 54%);
+ --clr-faint-blue: #3f3356;
+ --clr-black: #222;
+ --ff-primary: "Muli","Avenir",Helvetica,Arial,sans-serif;;
+ --ff-secondary: "Open Sans", sans-serif;
+ --transition: all 0.3s linear;
+ --spacing: 0.25rem;
+ --radius: 0.5rem;
+ --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ --max-width: 1170px;
+ --fixed-width: 620px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: -apple-system,
+ BlinkMacSystemFont,
+ Segoe UI,
+ Roboto,
+ Helvetica Neue,
+ Arial,
+ Noto Sans,
+ sans-serif,
+ Apple Color Emoji,
+ Segoe UI Emoji,
+ Segoe UI Symbol,
+ Noto Color Emoji;
+ font-size: 1rem;
+ font-weight: 400;
+ line-height: 1.5;
+ color: #212529;
+ text-align: left;
+ background-color: #fff;
+}
+
+ul {
+ list-style-type: none;
+}
+
+a {
+ text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+ text-transform: capitalize;
+ line-height: 1.25;
+ margin-bottom: 0.75rem;
+ font-family: var(--ff-primary);
+}
+
+h1 {
+ font-size: 3rem;
+}
+
+h2 {
+ font-size: 2rem;
+}
+
+h3 {
+ font-size: 1.25rem;
+}
+
+h4 {
+ font-size: 0.875rem;
+}
+
+p {
+ margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+ h1 {
+  font-size: 4rem;
+ }
+
+ h2 {
+  font-size: 2.5rem;
+ }
+
+ h3 {
+  font-size: 1.75rem;
+ }
+
+ h4 {
+  font-size: 1rem;
+ }
+
+ body {
+  font-size: 1rem;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4 {
+  line-height: 1;
+ }
+}
+
+/* navbar */
+nav {
+ background: var(--clr-white);
+ padding: .5rem 1.5rem;
+}
+
+/* fixed nav */
+.fixed-nav {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background: var(--clr-white);
+ border-bottom: 1px solid #eee;
+ z-index: 2;
+}
+
+.logo {
+  color: rgba(0, 0, 0, .9);
+  font-family: var(--ff-primary);
+}
+
+ .nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 50px;
+  font-size: 1.2rem;
+ }
+
+
+ .nav-center .btn {
+  padding: .7rem ;
+  margin: 1rem !important;
+  border-radius: .25rem !important;
+  border-color: #6c757d !important;
+  border: 1px solid #dee2e6 !important;
+  color: #2c3e50;
+  line-height: 5px;
+  text-transform: capitalize;
+  background-color: transparent;
+ }
+
+ header{
+  height:3rem;
+  margin-bottom: 20px;
+ }
+
+ /* section styling */
+ .top {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   background-image: linear-gradient(45deg, transparent 20%, #ccc 25%, transparent 0), linear-gradient(-45deg, transparent 20%, #ccc 25%, transparent 0), linear-gradient(-45deg, transparent 75%, #ccc 80%, transparent 0), radial-gradient(#efe 2px, transparent 0);
+   background-size: 18px 18px, 18px 18px;
+   height: auto;
+ }
+
+ .container {
+  display: flex;
+  margin: 20px;
+  padding: 40px;
+ }
+ .col1{
+  flex: 1;
+  padding: 10px;
+  width: 50%;
+ }
+
+ .col1 h2 {
+  font-size: 1.5rem;
+  line-height: 120%;
+  margin-bottom: 0;
+ }
+
+ .col1 li {
+  margin: 1rem 0;
+ } 
+
+ .col1 ul {
+  color:  var(--clr-faint-blue); 
+  font-size: 1.3rem;
+ }
+
+
+  .col1 li::before {
+       content: "\2713";
+       color: red;
+       display: inline-block;
+       width: 1em;
+       margin-left: -1em;
+       font-weight: 600;
+  }
+
+  .col1 a {
+        display: inline-block;
+        padding: 3% 6%;
+        background-color: #219988;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-top: 2%;
+        line-height: 20px;
+        margin-bottom: 2%;
+   }
+
+   .col1 a:hover {
+    text-decoration: underline;
+   }
+
+   .col2 {
+    display: none;
+   }
+ 
+ @media (min-width: 800px) {
+  .col2 {
+   display: flex;
+   flex: 1;
+   align-items: center;
+   justify-content: center;
+   width: 50%;
+   padding: 20px;
+   margin: 20px;
+  }
+
+  .col1 h2 {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 2rem;
+   line-height: 150%;
+   margin-bottom: 7%;
+  }
+
+   .col1 li {
+    margin: 2rem 0;
+   }
+
+ }
+ .col2 img {
+  width: 90%;
+ }
+
+ .productive {
+  position: relative;
+  width: 100%;
+  padding: 5%;
+  background-color: #e4f9f5;
+ }
+
+ .productive h1 {
+      text-align: center;
+      font-weight: 600;
+      font-size: 2rem;
+      margin: 0;
+      margin-bottom: 5%;
+      padding: 0;
+ }
+
+ @media (min-width: 800px) {
+
+  .productive-items {
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 2rem;
+  }
+ }
+
+ .productive-items {
+  grid-template-columns: repeat(autofit, 1fr);
+ }
+
+ .productive-items > div {
+  background: #fff;
+  height: auto;
+  margin: 5%;
+  border-radius: 5px;
+  padding: 3% 7%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+ }
+
+ .productive-items >div img {
+  display: inline-block;
+  width: 20%;
+ }
+
+ .productive-items > div h1 {
+       font-size: 1.2rem;
+       font-weight: 600;
+       line-height: 22px;
+       padding: 3% 0;
+ }
+
+ .productive-items > div p {
+      color: var(--faint-font);
+      font-size: 1rem;
+ }
+
+ /* stats styling */
+  @media (min-width: 800px) {
+   .stats {
+    width: 100%;
+    padding: 1% 5%;
+    background-color: #fff;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+   
+   }
+  }
+
+  .stats {
+    background-image: linear-gradient(45deg, transparent 20%, #ccc 25%, transparent 0),
+    linear-gradient(-45deg, transparent 20%, #ccc 25%, transparent 0),
+    linear-gradient(-45deg, transparent 75%, #ccc 80%, transparent 0),
+    radial-gradient(#efe 2px, transparent 0);
+    background-size: 18px 18px,
+    18px 18px;
+   grid-template-columns: repeat(autofit, 1fr);
+  }
+
+.stats > div {
+  text-align: center;
+  padding: 8%;
+ }
+ .lecturenotes>a h1 {
+  color: #fe7e8a;
+ }
+
+ .stats h1 {
+  font-size: 3.7rem;
+  font-weight: 600;
+ }
+
+ .stats p {
+  font-size: 1.2rem;
+  font-weight: 500;
+ }
+
+ .stats a {
+  text-decoration: none;
+  color: inherit;
+ }
+
+ .lecturetopics>a h1 {
+  color: #ebc97a;
+ }
+
+ .pastquestions>a h1 {
+  color: #4e6532;
+ }
+
+ .projects>a h1 {
+  color: #219988;
+ }
+
+ /* upload section */
+ 
+  .upload-now {
+   position: relative;
+   width: 100%;
+   padding: 6% 8%;
+   background-color: #e4f9f5;
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (min-width: 800px) {
+   .upload-now {
+    grid-template-columns: repeat(3, 1fr);
+   }
+  }
+  .upload-now>div {
+   position: relative;
+   font-size: 1.5rem;
+   font-weight: 600;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .upload-now>div a {
+   display: inline-block;
+   width: 40%;
+   text-align: center;
+   font-size: .9rem;
+   padding: 10px 15px;
+   border-radius: 4px;
+   color: #fff;
+   background-color: #219988;
+   font-weight: 600;
+   border: none;
+  }
+
+  /* footer */
+  footer {
+       position: relative;
+       width: 100%;
+       color: #fff;
+       background: linear-gradient(24deg, #40514e, #40514e 50%, #219988);
+  }
+@media (min-width: 550px) {
+ .quick-links {
+  grid-template-columns: repeat(3, 1fr);
+ }
+}
+  .quick-links {
+   position: relative;
+   width: 100%;
+   padding: 3% 4% 1% 4%;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: .5rem;
+  }
+
+  .quick-links>div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
+ .quick-links li {
+   padding: 6% 0;
+  }
+
+ .quick-links a {
+       color: #fff;
+  }
+
+  footer .social-connect {
+   display: block;
+   padding-top: 5px;
+  }
+
+  .social-connect h4 {
+       margin-bottom: 1rem;
+       font-size: 1.2rem;
+       padding-left: 7%;
+  }
+
+   .social-connect a {
+   padding: 3% 7%;
+  }
+
+  footer .copyright {
+   padding: 2%;
+   text-align: center;
+   font-weight: 400;
+   font-size: .8rem;
+  }
+
+ 
